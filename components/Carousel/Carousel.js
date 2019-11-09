@@ -7,13 +7,54 @@
     6. Have fun!
 */
 
-/* HTML:
-  <div class="carousel">
-    <div class="left-button"> < </div>
-    <img src="./assets/carousel/mountains.jpeg" />
-    <img src="./assets/carousel/computer.jpeg" />
-    <img src="./assets/carousel/trees.jpeg" />
-    <img src="./assets/carousel/turntable.jpeg" />
-    <div class="right-button"> > </div>
-  </div>
-*/
+// HTML:
+  
+
+  //Function creating carousel component
+/*function createCarousel() {
+  const carousel = document.createElement('div');
+  const leftBtn = document.createElement('div');
+  const mountains = document.createElement('img');
+  const computer = document.createElement('img');
+  const trees = document.createElement('img');
+  const turntable = document.createElement('img');
+  const rightBtn = document.createElement('div');
+
+  // Reference to all of the images
+  mountains.src = "./assets/carousel/mountains.jpeg";
+  computers.src = "./assets/carousel/computer.jpeg";
+  trees.src = "./assets/carousel/trees.jpeg";
+  turntable.src = "./assets/carousel/turntable.jpeg";
+
+  // Current index
+  carousel.classList('carousel');
+  leftBtn.classList('left-button');
+  rightBtn.classList('right-button');
+
+  carousel.appendChild(leftBtn);
+  carousel.appendChild(mountains);
+  carousel.appendChild(computer);
+  carousel.appendChild(trees);
+  carousel.appendChild(turntable);
+  carousel.appendChild(rightBtn);
+
+  // Click handler
+  const pArr = [mountains, computer, trees, turnable,];
+  mountains.style.display = 'flex';
+  pArr.forEach(() => {
+    rightBtn.addEventListener('click', () => {
+      if (mountains.style.display = 'flex') {
+        mountains.style.display = none;
+        computer.style.dispaly = 'flex';
+      }else if (computer.style.display = 'flex'){
+        computer.style.display = 'none';
+        trees.style.display = 'flex';
+      }
+    });
+  });
+  return carousel;
+}
+
+const container = document.querySelector('.carousel-container');
+const create = CreateCarousel();
+container.appendChild(create)
